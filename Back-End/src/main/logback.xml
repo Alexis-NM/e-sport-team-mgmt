@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration>
+  <timestamp key="timestamp-by-second" datePattern="yyyyMMdd'T'HHmmss"/>
+  
+    <appender name="Console-Appender" class="ch.qos.logback.core.ConsoleAppender">
+        <layout>
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>   
+ 
+  <logger name="com.esport.back" level="INFO">
+    <appender-ref ref="Console-Appender" />
+  </logger>
+
+  <logger name="org.springframework" level="DEBUG">
+    <appender-ref ref="Console-Appender" />
+  </logger>
+  
+  <root level="INFO">
+    <appender-ref ref="Console-Appender" />
+  </root>
+</configuration>

@@ -1,0 +1,219 @@
+{
+  "item": [
+    {
+      "id": "e4e7bf9b-845c-42b8-8172-5137b68a400a",
+      "name": "gamestyle",
+      "description": {
+        "content": "Requests for gamestyle",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c18b6adc-c85f-44a2-b676-77c342de2837",
+          "name": "Get all Gamestyle",
+          "request": {
+            "url": {
+              "protocol": "",
+              "port": "{{base_port}}",
+              "path": [
+                "{{base_api}}",
+                "gamestyle"
+              ],
+              "host": [
+                "{{base_host}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "1d716d3a-e091-4b44-bbac-af9cb9389b0c",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Test si retour ok\", () => { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "118717b8-a7f7-47c6-adef-271954f18cbc",
+          "name": "Get by Gamestyle id",
+          "request": {
+            "url": {
+              "protocol": "",
+              "port": "{{base_port}}",
+              "path": [
+                "{{base_api}}",
+                "gamestyle",
+                "1"
+              ],
+              "host": [
+                "{{base_host}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "445b172a-5815-41dc-8506-37418a79a185",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Test si retour ok\", () => { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "2fed5d1b-e664-4bf0-8288-fad78730c96b",
+          "name": "Create Gamestyle",
+          "request": {
+            "url": {
+              "protocol": "",
+              "port": "{{base_port}}",
+              "path": [
+                "{{base_api}}",
+                "gamestyle"
+              ],
+              "host": [
+                "{{base_host}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"gamestyle\":\"xxxxx\"}"
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "1e6b1d7d-19fb-47a0-9a1e-016433955898",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Test si retour ok\", () => { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "e92d4e7f-1d96-42a6-ab49-e72325e0b049",
+          "name": "Delete by Gamestyle id",
+          "request": {
+            "url": {
+              "protocol": "",
+              "port": "{{base_port}}",
+              "path": [
+                "{{base_api}}",
+                "gamestyle",
+                "1"
+              ],
+              "host": [
+                "{{base_host}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "d31fb129-b849-4ed8-839c-6b08fe59b2ca",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Test si retour ok\", () => { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "64dd9543-f2d9-46fe-97d3-43333340c737",
+          "name": "Update by Gamestyle id",
+          "request": {
+            "url": {
+              "protocol": "",
+              "port": "{{base_port}}",
+              "path": [
+                "{{base_api}}",
+                "gamestyle",
+                "1"
+              ],
+              "host": [
+                "{{base_host}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"idgamestyle\":1,\"gamestyle\":\"xxxxx\"}"
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "3ca932a9-123b-4fca-bf53-c02b5d33f528",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Test si retour ok\", () => { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [],
+  "info": {
+    "_postman_id": "ed2f9e54-c017-4793-97f4-31cf6022aeb9",
+    "name": "com.esport.back",
+    "version": {
+      "raw": "1.0.0",
+      "major": 1,
+      "minor": 0,
+      "patch": 0,
+      "prerelease": [],
+      "build": [],
+      "string": "1.0.0"
+    },
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  }
+}

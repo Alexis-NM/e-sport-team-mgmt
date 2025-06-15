@@ -1,0 +1,71 @@
+<section class="member-container">
+  <h1 class="name-title">{{ member.firstname }} {{ member.lastname }}</h1>
+  @if(memberType === 'player'){
+  <h3 class="member-number">Joueur #{{ member.idMember + 1 }}</h3>
+  } @if(memberType === 'staff'){
+  <h3 class="member-number">Staff #{{ member.idMember + 1 }}</h3>
+  }
+  <article class="member-card">
+    <div class="picture-container">
+      <img
+        src="{{ member.photo }}"
+        alt="{{ member.firstname }} {{ member.lastname }}"
+        class="id-picture"
+      />
+    </div>
+    <article class="member-infos">
+      @if(!isEditing){
+      <button (click)="enableEditing()" class="edit-button">
+        <img src="../../../../assets/Images/pencil.png" alt="Edit" class="pencil"/>
+      </button>
+      <div class="member-infos-text">
+        <p>&#9679; {{ member.country }}</p>
+        <p>&#9679; {{ member.firstname }} | {{ member.lastname }}</p>
+        <p>&#9679; {{ member.nickname }}</p>
+      </div>
+      } @if(isEditing){
+        <form [formGroup]="memberForm" (ngSubmit)="saveChanges()" class="member-infos-form">
+          <button type="submit" class="edit-button">
+            <img src="../../../../assets/Images/save.png" alt="Save" class="pencil"/>
+          </button>
+        <label>
+          &#9679; Pays:
+          <input formControlName="country" />
+        </label>
+        <label>
+          &#9679; Prénom:
+          <input formControlName="firstname" />
+        </label>
+        <label>
+          &#9679; Nom:
+          <input formControlName="lastname" />
+        </label>
+        <label>
+          &#9679; Surnom:
+          <input formControlName="nickname" />
+        </label>
+      </form>
+      }
+      <div class="game-infos-container">
+        <div>
+          <p class="bold-title">Nom du Jeu :</p>
+          <p>{{ member.game.name }}</p>
+          <p class="bold-title">Nom de l'équipe :</p>
+          <p>{{ member.team.teamName }}</p>
+          <p class="bold-title">Rôle dans l'équipe :</p>
+          <p>{{ member.role }}</p>
+        </div>
+        <div>
+          <img
+            [src]="member.game.img"
+            alt="{{ member.game.name }} logo"
+            class="game-logo"
+          />
+        </div>
+      </div>
+    </article>
+  </article>
+</section>
+<button class="back-to-team">
+  <a [routerLink]="['/team', member.team.idTeam]">REVENIR VERS L'ÉQUIPE</a>
+</button>

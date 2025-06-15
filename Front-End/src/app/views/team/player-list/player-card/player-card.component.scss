@@ -1,0 +1,35 @@
+@import "../../../../../styles.scss";
+
+.player-card {
+  border-radius: 20px;
+  border: 2px solid $secondary-color;
+  width: 20rem;
+  height: 7.5rem;
+  display: flex;
+  padding: 2rem;
+
+  .photo-container {
+    display: flex;
+    align-items: center;
+    .player-photo {
+      display: flex;
+      width: auto;
+      max-width: 11rem;
+      border-radius: 10px;
+      background-color: whitesmoke;
+      height: auto;
+      max-height: 6rem;
+    }
+  }
+  .player-info {
+    font-family: $font-family-primary;
+    color: $secondary-color;
+    .player-number-title {
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+.player-card:hover {
+  border: 2px dotted $secondary-color;
+}

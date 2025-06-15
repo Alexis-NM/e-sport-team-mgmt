@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+// Définition des variables de couleurs
+$primary-color: #5a34aa;
+$secondary-color: #fffae1;
+$tertiary-color: #734795;
+$quaternary-color: #ba3685;
+
+// Définition de la variable de police
+$font-family-primary: "Montserrat", sans-serif;
+
+html,
+body {
+  margin: 0;
+  font-family: $font-family-primary;
+  background-color: $primary-color;
+}

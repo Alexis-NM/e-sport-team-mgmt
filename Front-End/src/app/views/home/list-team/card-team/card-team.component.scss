@@ -1,0 +1,60 @@
+@import "../../../../../styles.scss";
+
+.team-number {
+  font-family: $font-family-primary;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: $secondary-color;
+}
+
+.team-card {
+  display: flex;
+  width: 50rem;
+  margin: auto;
+  background-color: $secondary-color;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  justify-content: space-around;
+  font-family: $font-family-primary;
+
+  .team-logo {
+    width: 10rem;
+    height: auto;
+    padding: 0.5rem;
+    border-radius: 15px;
+  }
+
+  .game-logo{
+    width : 10rem;
+    border-radius: 10px;
+}
+
+  .card-container-1 {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    .team-name {
+      background-color: whitesmoke;
+      padding: 0.5rem;
+      margin-top: 1rem;
+      text-align: center;
+      font-family: $font-family-primary;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 15px;
+    }
+  }
+  .card-container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .game-title{
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+  }
+}

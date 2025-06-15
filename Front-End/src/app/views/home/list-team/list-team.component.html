@@ -1,0 +1,6 @@
+<h2 class="list-title">Liste des équipes</h2>
+<section class="team-list">
+  @for (team of teams; track $index){
+  <app-card-team [team]="team" class="team-card-component"></app-card-team>
+  }
+</section>

@@ -1,0 +1,5 @@
+<section class="staff-card-container">
+  @for(member of staff; track $index){
+    <app-staff-card [member]="member" [teamId]="teamId"></app-staff-card>
+  }
+</section>

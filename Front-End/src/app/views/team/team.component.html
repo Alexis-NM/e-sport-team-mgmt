@@ -1,0 +1,72 @@
+@if(team){
+<section class="team-container">
+  @if(team.game){
+  <img
+    [src]="team.game.bannerimg"
+    alt="bannière du jeu de l'équipe"
+    class="team-banner"
+  />
+  }
+  <div class="team-header">
+    @if(team.logo){
+    <img
+      [src]="team.logo"
+      alt="{{ team.teamName }} logo"
+      class="team-header-logo"
+    />
+    }
+    <div class="team-title">
+      <p class="bold-name">Team {{ team.idTeam + 1 }}</p>
+      <p>{{ team.teamName }}</p>
+    </div>
+  </div>
+  @if(team.game){
+  <article class="game-info-card">
+    <h3 class="game-title">{{ team.game.name }}</h3>
+    <div class="team-game-content">
+      <img
+        [src]="team.game.img"
+        alt="{{ team.game.name }} logo"
+        class="game-logo"
+      />
+      <div class="text-info">
+        <p>Âge Minimum: {{ team.game.pegi }} ans</p>
+        <p>Année d'édition: {{ team.game.year }}</p>
+        <p>
+          Style de jeu: @for (style of team.game.styles ; track $index ){
+          <span>{{ style.style }}</span>
+          }
+        </p>
+      </div>
+    </div>
+  </article>
+  }
+
+  <article class="player-list-content">
+    <h2 class="member-list-title">
+      Les joueurs de l'équipe N°{{ team.idTeam + 1 }} : {{ team.teamName }}
+    </h2>
+    <div class="player-card-container">
+      <app-player-list
+        [player]="team.player"
+        [teamId]="team.idTeam"
+      ></app-player-list>
+    </div>
+  </article>
+
+  <article class="staff-list-content">
+    <h2 class="member-list-title">
+      Les membres du staff de l'équipe N°{{ team.idTeam + 1 }} : {{ team.teamName }}
+    </h2>
+    <div class="staff-card-container">
+      <app-staff-list [staff]="team.staff" [teamId]="team.idTeam"></app-staff-list>
+    </div>
+  </article>
+
+  <button class="home-button" (click)="navigateToHome()">
+    REVENIR VERS LA LISTE DES ÉQUIPES
+  </button>
+</section>
+} @if(!team){
+<p>Chargement des informations de l'équipe...</p>
+}

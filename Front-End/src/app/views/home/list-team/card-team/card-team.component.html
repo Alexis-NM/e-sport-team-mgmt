@@ -1,0 +1,14 @@
+<h3 class="team-number"> Team n°{{team.idTeam+1}}</h3>
+<article class="team-card" (click)="onClick()" >
+    <img [src]="team.logo" alt="{{ team.teamName }} logo" class="team-logo">
+  <div class="card-container-1">
+    <h3 class="team-name">{{ team.teamName }}</h3>
+    <p>Nombre de joueurs actuel : {{ team.player.length }}</p>
+       <p>Nombre de joueurs maximum : {{ team.maxPlayers }}</p>
+    <p>{{ team.staff.length }} Membre(s) du staff</p>
+    </div>
+  <div class="card-container-2">
+      <p class="game-title">{{ team.game.name }}</p>
+      <img [src]="team.game.img" alt="{{ team.game.name }} logo" class="game-logo">
+  </div>
+</article>

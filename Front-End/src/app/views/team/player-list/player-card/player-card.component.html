@@ -1,0 +1,16 @@
+<section class="player-card" (click)="onClick()">
+  <article class="photo-container">
+    <img
+    [src]="player.photo"
+    alt="{{ player.nickname }} logo"
+    class="player-photo"
+    />
+  </article>
+  <article class="player-info">
+    <p class="player-number-title">Joueur N° {{ player.idMember + 1 }}</p>
+    <ul class="player-info-text">
+      <li><strong>Pseudo :</strong> {{ player.nickname }}</li>
+      <li><strong>Rôle :</strong> {{ player.role }}</li>
+    </ul>
+  </article>
+</section>

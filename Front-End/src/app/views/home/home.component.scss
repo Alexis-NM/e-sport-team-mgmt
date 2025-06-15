@@ -1,0 +1,26 @@
+@import "../../../styles.scss";
+
+.logo {
+  display: flex;
+  width: 40rem;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.info-text {
+  display: flex;
+  width: 50rem;
+  margin: auto;
+  background-color: $tertiary-color;
+  color: $secondary-color;
+  font-family: $font-family-primary;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  border: 2px solid $secondary-color;
+}

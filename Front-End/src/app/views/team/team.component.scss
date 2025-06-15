@@ -1,0 +1,107 @@
+@import "../../../styles.scss";
+
+.team-container {
+  margin-bottom: 4rem;
+  .team-banner {
+    height: 18rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% 60%;
+  }
+
+  .team-header {
+    display: flex;
+    font-family: $font-family-primary;
+    color: $secondary-color;
+    width: 25rem;
+    margin: auto;
+    margin-bottom: 5rem;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+    .team-header-logo {
+      width: 8rem;
+      border-radius: 10px;
+    }
+    .team-title {
+      font-size: 2rem;
+      line-height: 1;
+      .bold-name {
+        font-weight: 800;
+        font-size: 2rem;
+      }
+    }
+  }
+  .game-info-card {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family-primary;
+    color: $secondary-color;
+    width: 45rem;
+    margin: auto;
+    border: 2px solid $secondary-color;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+    justify-content: center;
+    align-items: center;
+    .game-title {
+      margin-top: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      font-family: $font-family-primary;
+    }
+    .game-logo {
+      width: 12rem;
+      border-radius: 10px;
+    }
+    .team-game-content {
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 2rem;
+      .text-info {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .player-list-content {
+    .member-list-title {
+      font-family: $font-family-primary;
+      color: $secondary-color;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+  }
+
+  .staff-list-content {
+    margin-top: 5rem;
+    .member-list-title {
+      font-family: $font-family-primary;
+      color: $secondary-color;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+  }
+  .home-button {
+    display: flex;
+    padding: 0.5rem;
+    margin: auto;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 3.5rem;
+    background-color: $quaternary-color;
+    color: $secondary-color;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: $font-family-primary;
+    font-weight: 500;
+  }
+}

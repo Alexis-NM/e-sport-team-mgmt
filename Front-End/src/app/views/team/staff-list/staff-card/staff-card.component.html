@@ -1,0 +1,13 @@
+<section class="staff-card" (click)="onClick()">
+  <article class="photo-container">
+    <img [src]="member.photo" alt="{{member.nickname}}" class="staff-photo"
+    />
+  </article>
+  <article class="staff-info">
+    <p class="staff-number-title">Staff N° {{ member.idMember + 1 }}</p>
+    <ul class="staff-info-text">
+      <li><strong>Pseudo :</strong> {{ member.nickname }}</li>
+      <li><strong>Rôle :</strong> {{ member.role }}</li>
+    </ul>
+  </article>
+</section>
